@@ -1,9 +1,10 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { Axios } from "../../../Api";
 
 // Define a service using a base URL and expected endpoints
 export const categoryApi = createApi({
   reducerPath: "categoryApi",
-  baseQuery: fetchBaseQuery({ baseUrl: `${import.meta.env.VITE_APP_URL}/api/` }),
+  baseQuery: fetchBaseQuery({ baseUrl: `${Axios}/api/` }),
   endpoints: (builder) => ({
     // get category
     getCategoryByName: builder.query({
